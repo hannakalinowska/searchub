@@ -3,6 +3,10 @@ if(window.location.host === 'github.com') {
     filter($('#searchub_filter input[type=text]').attr('value'));
     return false;
   });
+  $('#searchub_filter a.reset').live('click', function() {
+    unfilter();
+    return false;
+  });
 
   function insertStyles() {
     var style = '<style type="text/css"> \
@@ -26,7 +30,7 @@ if(window.location.host === 'github.com') {
         <input type="text" /> \
         <input type="submit" value="ok"/> \
         or \
-        <a href="#">reset<a/> \
+        <a href="#" class="reset">reset<a/> \
       </form> \
     </div>';
     $('.pagehead').append(html);
@@ -42,6 +46,10 @@ if(window.location.host === 'github.com') {
         currentElement.show();
       }
     });
+  }
+
+  function unfilter() {
+    $('.news div.alert').show();
   }
 
   insertStyles();
