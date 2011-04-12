@@ -4,8 +4,32 @@ if(window.location.host === 'github.com') {
     return false;
   });
 
+  function insertStyles() {
+    var style = '<style type="text/css"> \
+      #searchub_filter { \
+        -moz-border-radius: 5px; \
+        background: url("https://github.com/images/modules/pagehead/tab_background.gif?v2") repeat-x scroll 0 0 transparent; \
+        border: 1px solid #dddddd; \
+        height: 26px; \
+        padding: 6px 10px; \
+        margin: -3px 0 0 16px;\
+        width: 500px; \
+      } \
+    </style>';
+    $('head').append(style);
+  }
+
   function showSearch() {
-    $('.pagehead').append('<div><form id="searchub_filter">Filter: <input type="text" /><input type="submit" name="ok"/></form></div>');
+    var html = '<div> \
+      <form id="searchub_filter"> \
+        Filter: \
+        <input type="text" /> \
+        <input type="submit" value="ok"/> \
+        or \
+        <a href="#">reset<a/> \
+      </form> \
+    </div>';
+    $('.pagehead').append(html);
   }
 
   function filter(query) {
@@ -20,6 +44,7 @@ if(window.location.host === 'github.com') {
     });
   }
 
+  insertStyles();
   showSearch();
 }
 else {
