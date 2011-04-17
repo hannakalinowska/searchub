@@ -9,11 +9,12 @@ if(window.location.host === 'github.com') {
   });
   $('#searchub_filter a.close').live('click', function() {
     $(this).parents('#searchub_filter').slideUp('fast');
+    $('.searchub_style').remove();
     return false;
   });
 
   function insertStyles() {
-    var style = '<style type="text/css"> \
+    var style = '<style type="text/css" class="searchub_style"> \
       #searchub_filter { \
         -moz-border-radius: 5px; \
         background: url("https://github.com/images/modules/pagehead/tab_background.gif?v2") repeat-x scroll 0 0 transparent; \
@@ -33,11 +34,10 @@ if(window.location.host === 'github.com') {
   function showSearch() {
     var html = '<div> \
       <form id="searchub_filter"> \
-        Filter: \
         <input type="text" /> \
-        <input type="submit" value="ok"/> \
+        <input type="submit" value="Filter"/> \
         or \
-        <a href="#" class="reset">reset<a/> \
+        <a href="#" class="reset">reset</a> \
         <a href="#" class="close">close</a> \
       </form> \
     </div>';
