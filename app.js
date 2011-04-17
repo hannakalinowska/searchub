@@ -7,6 +7,10 @@ if(window.location.host === 'github.com') {
     unfilter();
     return false;
   });
+  $('#searchub_filter a.close').live('click', function() {
+    $(this).parents('#searchub_filter').slideUp('fast');
+    return false;
+  });
 
   function insertStyles() {
     var style = '<style type="text/css"> \
@@ -18,6 +22,9 @@ if(window.location.host === 'github.com') {
         padding: 6px 10px; \
         margin: -3px 0 0 16px;\
         width: 500px; \
+      } \
+      #searchub_filter .close { \
+        float: right; \
       } \
     </style>';
     $('head').append(style);
@@ -31,6 +38,7 @@ if(window.location.host === 'github.com') {
         <input type="submit" value="ok"/> \
         or \
         <a href="#" class="reset">reset<a/> \
+        <a href="#" class="close">close</a> \
       </form> \
     </div>';
     $('.pagehead').append(html);
