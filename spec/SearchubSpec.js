@@ -1,6 +1,6 @@
 describe('Searchub', function() {
   describe('#initialize', function() {
-    it('inserts styles and shows search box', function() {
+    it('calls insertStyles and showSearch', function() {
       spyOn(Searchub, 'insertStyles');
       spyOn(Searchub, 'showSearch');
 
@@ -8,6 +8,14 @@ describe('Searchub', function() {
 
       expect(Searchub.insertStyles).toHaveBeenCalled();
       expect(Searchub.showSearch).toHaveBeenCalled();
+    });
+  });
+
+  describe('#insertStyles', function() {
+    it('inserts style tag into head', function() {
+      loadFixtures('spec/fixtures/dashboard.html');
+      Searchub.insertStyles();
+      expect($('head style').length).toEqual(1);
     });
   });
 });
