@@ -15,7 +15,15 @@ describe('Searchub', function() {
     it('inserts style tag into head', function() {
       loadFixtures('dashboard.html');
       Searchub.insertStyles();
-      expect($('head style').length).toEqual(1);
+      expect($('head style')).toExist();
+    });
+  });
+
+  describe('#showSearch', function() {
+    it('loads the search form into the page', function() {
+      loadFixtures('dashboard.html');
+      Searchub.showSearch();
+      expect($('#searchub_filter')).toExist();
     });
   });
 });
