@@ -13,7 +13,7 @@ describe('Searchub', function() {
 
   describe('#insertStyles', function() {
     it('inserts style tag into head', function() {
-      loadFixtures('spec/fixtures/dashboard.html');
+      loadFixtures('dashboard.html');
       Searchub.insertStyles();
       expect($('head style').length).toEqual(1);
     });
