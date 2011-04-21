@@ -74,8 +74,9 @@ describe('Searchub', function() {
 
   describe('#buildRepoQuery', function() {
     it('builds a repo CSS query from an array of repo names', function() {
-      expect(Searchub.buildRepoQuery(['rick', 'node'])).
-        toEqual('a[href$=/rick]', 'a[href$=/node]');
+      var result = Searchub.buildRepoQuery(['rick', 'node']);
+      expect(result).toContain('a[href$=/rick]');
+      expect(result).toContain('a[href$=/node]');
     });
   });
 });
