@@ -31,7 +31,7 @@ if(window.location.host === 'github.com') {
       return false;
     });
   }
-
+}
 else {
   alert("You're not on Github!");
 }
