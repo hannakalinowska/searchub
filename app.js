@@ -7,9 +7,6 @@ if(window.location.host === 'github.com') {
   b.src = baseUrl + 'lib/searchub.js';
   a.appendChild(b);
 
-else {
-  alert("You're not on Github!");
-}
   var timeout = setInterval(function() {
     if(typeof(Searchub) != 'undefined') {
       initializeSearchub();
@@ -35,3 +32,6 @@ else {
     });
   }
 
+else {
+  alert("You're not on Github!");
+}
