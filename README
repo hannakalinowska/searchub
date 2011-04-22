@@ -9,9 +9,6 @@ Visit http://searchub.thinksimple.pl/ and drag the link into your bookmarks tool
 Supported syntax:
 =================
 
-```
 rails #=> filters by user or repo
 user:rails #=> filters by user
 repo:rails #=> filters by repo
-```
-
