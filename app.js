@@ -25,7 +25,7 @@ else {
       return false;
     });
     $('#searchub_filter a.reset').live('click', function() {
-      Searchub.filter();
+      Searchub.unfilter();
       return false;
     });
     $('#searchub_filter a.close').live('click', function() {
