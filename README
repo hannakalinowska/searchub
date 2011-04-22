@@ -3,13 +3,15 @@ This little bookmarklet will enable filtering entries on your Github dashboard -
 Installation:
 =============
 
-Visit <http://searchub.thinksimple.pl/> and drag the link into your bookmarks toolbar. Then visit your Github Dashboard and click the bookmark. That's it!
+Visit http://searchub.thinksimple.pl/ and drag the link into your bookmarks toolbar. Then visit your Github Dashboard and click the bookmark. That's it!
 
 
 Supported syntax:
 =================
 
-    rails #=> filters by user or repo
-    user:rails #=> filters by user
-    repo:rails #=> filters by repo
+```
+rails #=> filters by user or repo
+user:rails #=> filters by user
+repo:rails #=> filters by repo
+```
 
