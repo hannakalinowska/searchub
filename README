@@ -1,3 +1,15 @@
-This little bookmarklet will enable filtering entries on your dashboard - by username or by project.
+This little bookmarklet will enable filtering entries on your Github dashboard - by username or by project.
 
-Work in progress - does NOT work yet.
+Installation:
+=============
+
+Visit <http://searchub.thinksimple.pl/> and drag the link into your bookmarks toolbar. Then visit your Github Dashboard and click the bookmark. That's it!
+
+
+Supported syntax:
+=================
+
+    rails #=> filters by user or repo
+    user:rails #=> filters by user
+    repo:rails #=> filters by repo
+
