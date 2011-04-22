@@ -34,7 +34,7 @@ var Searchub = {
     var elements = query.split(' ');
 
     for(var i in elements) {
-      if(name = elements[i].match(/^(?:user:)?(\w+)$/)) {
+      if(name = elements[i].match(/^(?:user:)?([^:]+?)$/)) {
         userNames.push(name[1]);
       }
     }
@@ -47,7 +47,7 @@ var Searchub = {
     var elements = query.split(' ');
 
     for(var i in elements) {
-      if(name = elements[i].match(/^(?:repo:)?(\w+)$/)) {
+      if(name = elements[i].match(/^(?:repo:)?([^:]+?)$/)) {
         repoNames.push(name[1]);
       }
     }
