@@ -73,6 +73,7 @@ var Searchub = {
 
   unfilter: function() {
     $('.news div.alert').show();
+    $('#searchub_filter input[type=text]').val('');
   },
 
   insertStyles: function() {
