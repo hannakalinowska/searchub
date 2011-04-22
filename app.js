@@ -4,7 +4,7 @@ if(window.location.host === 'github.com') {
   var a = document.getElementsByTagName('head')[0];
   var b = document.createElement('script');
   b.type = 'text/javascript';
-  b.src = baseUrl + 'src/searchub.js';
+  b.src = baseUrl + 'lib/searchub.js';
   a.appendChild(b);
 
 else {
